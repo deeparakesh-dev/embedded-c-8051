@@ -1,7 +1,6 @@
 /*
 Program: LED Pattern Generation (Running LEDs)
 Microcontroller: 8051
-Concepts Used: GPIO, Port Output, Delay Loop
 
 Description:
 This program generates a running LED pattern on Port 1.
