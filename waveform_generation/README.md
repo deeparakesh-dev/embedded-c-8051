@@ -1,4 +1,4 @@
-## Square Wave Generation using 8051
+## Square Wave Generation
 
 ### Problem Statement
 Write an Embedded C program to generate a square wave on a port pin of the 8051 microcontroller.
