@@ -37,25 +37,6 @@ The system simulates three tasks:
   Represents non-critical status updates
 
 ---
-## Scheduler Flowchart
-
-```mermaid
-flowchart LR
-
-Start([Start]) --> Loop[Scheduler Loop]
-
-Loop --> S{Sensor Ready?}
-
-S -->|Yes| ST[Run Sensor Task]
-S -->|No| C{Communication Ready?}
-
-C -->|Yes| CT[Run Communication Task]
-C -->|No| LT[Run LED Task]
-
-ST --> Loop
-CT --> Loop
-LT --> Loop
-```
 
 ## How it Works
 
