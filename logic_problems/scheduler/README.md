@@ -40,21 +40,21 @@ The system simulates three tasks:
 ## Scheduler Flowchart
 
 ```mermaid
-flowchart TD
+flowchart LR
 
 Start([Start]) --> Loop[Scheduler Loop]
 
-Loop --> SensorCheck{Sensor Ready?}
+Loop --> S{Sensor Ready?}
 
-SensorCheck -->|Yes| SensorTask[Run Sensor Task]
-SensorCheck -->|No| CommCheck{Communication Ready?}
+S -->|Yes| ST[Run Sensor Task]
+S -->|No| C{Communication Ready?}
 
-CommCheck -->|Yes| CommTask[Run Communication Task]
-CommCheck -->|No| LedTask[Run LED Task]
+C -->|Yes| CT[Run Communication Task]
+C -->|No| LT[Run LED Task]
 
-SensorTask --> Loop
-CommTask --> Loop
-LedTask --> Loop
+ST --> Loop
+CT --> Loop
+LT --> Loop
 ```
 
 ## How it Works
