@@ -42,19 +42,19 @@ The system simulates three tasks:
 ```mermaid
 flowchart TD
 
-Start([Start]) --> Loop[Infinite Loop]
+Start([Start]) --> Loop[Scheduler Loop]
 
-Loop --> CheckSensor{Sensor Task Ready?}
+Loop --> SensorCheck{Sensor Ready?}
 
-CheckSensor -->|Yes| RunSensor[Execute Sensor Task]
-CheckSensor -->|No| CheckComm{Communication Task Ready?}
+SensorCheck -->|Yes| SensorTask[Run Sensor Task]
+SensorCheck -->|No| CommCheck{Communication Ready?}
 
-CheckComm -->|Yes| RunComm[Execute Communication Task]
-CheckComm -->|No| RunLED[Execute LED Task]
+CommCheck -->|Yes| CommTask[Run Communication Task]
+CommCheck -->|No| LedTask[Run LED Task]
 
-RunSensor --> Loop
-RunComm --> Loop
-RunLED --> Loop
+SensorTask --> Loop
+CommTask --> Loop
+LedTask --> Loop
 ```
 
 ## How it Works
