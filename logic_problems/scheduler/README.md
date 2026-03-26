@@ -37,6 +37,7 @@ The system simulates three tasks:
   Represents non-critical status updates
 
 ---
+```markdown
 ## Scheduler Flowchart
 
 ```mermaid
@@ -55,8 +56,7 @@ CheckComm -->|No| RunLED[Execute LED Task]
 RunSensor --> Loop
 RunComm --> Loop
 RunLED --> Loop
-
----
+```
 
 ## How it Works
 
