@@ -37,7 +37,6 @@ The system simulates three tasks:
   Represents non-critical status updates
 
 ---
-```markdown
 ## Scheduler Flowchart
 
 ```mermaid
